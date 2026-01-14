@@ -1,0 +1,203 @@
+:root {
+    --primary: #008000;
+    --dark-primary: #006400;
+    --secondary: #FFD700;
+    --principal-font: "Bebas Neue", sans-serif;   
+}
+
+  
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+} 
+
+body {
+    background-color: var(--primary);
+}
+
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+.header__logo {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.nav {
+  background-color: var(--secondary); 
+  display: flex;
+  justify-content: center;
+}
+
+.nav__links {
+  color: blue;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 400;  
+  font-family: var(--principal-font);
+  font-size: 2em;
+}
+
+a:hover {
+  color: #fff;
+}
+
+h1, h2 {
+  font-family: var(--principal-font);
+  color: var(--secondary);
+  text-align: center;
+}
+
+footer {
+  background-color: var(--dark-primary);
+  padding: 5px;   
+  text-align: center
+  
+}
+
+.footer__copyright {
+  font-family: var(--principal-font);
+  font-size: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 100rem;
+  
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  
+  
+  }
+}
+
+@media (min-width: 912px ) {
+  .grid {
+  margin-left:  20%;
+  margin-right: 20%;
+  }
+}
+
+  .product {
+  background-color: var(--dark-primary); 
+  margin: 5%;
+} 
+
+
+.product__image {
+  padding: 0.7rem;
+  width: 100%;
+}
+
+.product__name {
+  font-family: var(--principal-font);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.product__price {
+  font-family: var(--principal-font);
+  color: #FFD700;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+  .shirt {
+    min-height: 20rem;
+    margin: 2.5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+
+.shirts {
+  background-image: url(../img/grafico1.jpg);
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  
+}
+
+
+.node-shirt {
+  background-image: url(../img/grafico2.jpg);
+  grid-column: 1/3;
+  
+}
+
+@media(min-width: 768px) {
+.node-shirt {
+  grid-column: 2/4;
+  grid-row: 4/5;
+}
+}
+
+/* about us page */
+
+.description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 786px) {
+ .description {
+  grid-template-rows: 1fr 1fr;
+} 
+}
+
+
+@media (min-width: 1200px) {
+  .description {
+    margin-right: 20%;
+  margin-left: 20%;
+  }
+}
+
+.description__text {
+  padding: 1.5rem
+}
+
+.description__image {
+  padding: 1.5rem;
+  width: 100%;
+  grid-row: 1/2;
+}
+
+@media (min-width: 768px ) {
+  .description__image {
+    grid-column: 2/3;
+  }
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+
+@media (min-width: 1200px){
+  .icons {
+  margin-left: 20%;
+  margin-right: 20%;
+  }
+}
+
+.icons__sample {
+  margin: 5%;
+}
+
+@media (min-width: 768px){
+  .icons {
+  grid-template-columns: repeat(4, 1fr);
+}
+}
